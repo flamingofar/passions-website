@@ -4,44 +4,46 @@
 
 /*------------------- MAIN -------------------*/
 @font-face {
-  font-family: parklane;
-  src: url(../assets/fonts/parklanenf-webfont.woff2);
+	font-family: parklane;
+	src: url(../assets/fonts/parklanenf-webfont.woff2);
 }
 
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 
-  text-decoration: none;
+	text-decoration: none;
+	list-style: none;
+	text-decoration: none;
 }
 
 body {
-  background: #1f2735;
-  color: #c7b588;
+	background: #1f2735;
+	color: #c7b588;
 }
 
 main,
 footer {
-  display: grid;
-  grid-template-columns:
-    minmax(1rem, 1fr)
-    minmax(auto, 1200px)
-    minmax(1rem, 1fr);
+	display: grid;
+	grid-template-columns:
+		minmax(1rem, 1fr)
+		minmax(auto, 1200px)
+		minmax(1rem, 1fr);
 }
 
 main > *,
 footer {
-  grid-column: 2;
-  padding: 1.3rem;
+	grid-column: 2;
+	padding: 1.3rem;
 }
 
 img,
 video {
-  display: block;
-  width: 100%;
-  height: auto;
-  margin-bottom: 1rem;
+	display: block;
+	width: 100%;
+	height: auto;
+	margin-bottom: 1rem;
 }
 
 h1,
@@ -50,10 +52,10 @@ h3,
 h4,
 h5,
 h6 {
-  color: #bf962c;
-  font-family: "parklane", sans-serif;
+	color: #bf962c;
+	font-family: "parklane", sans-serif;
 
-  margin-bottom: 1rem;
+	margin-bottom: 1rem;
 }
 
 h2 {
@@ -62,128 +64,146 @@ h3 {
 }
 
 p {
-  font-family: "Songti TC", serif;
-  margin-bottom: 1rem;
+	font-family: "Songti TC", serif;
+	margin-bottom: 1rem;
 }
 
 a {
-  color: #c7b588;
+	color: #c7b588;
+}
+
+button {
+	color: #c7b588;
+	font-family: "Songti TC", serif;
 }
 
 /*------------------- FOOTER -------------------*/
 footer {
-  border-top: 2px solid #bf962c;
-  margin-top: 3rem;
-  padding-bottom: 2rem;
+	position: relative;
+	display: grid;
+	margin-top: 3rem;
+	padding-bottom: 2rem;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
 }
+
+footer::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 80%;
+	height: 2px;
+	background: #bf962c;
+}
+
 footer p {
-  text-align: center;
-  margin-top: 1rem;
-  font-size: 0.8rem;
+	text-align: center;
+	margin-top: 1rem;
+	font-size: 0.8rem;
 }
 
 main {
-  padding: 2vw;
-  margin: 2vw;
+	padding: 2vw;
+	margin: 2vw;
 }
 
 /******* Menu *********/
 
 #menuknap {
-  font-size: 4rem;
+	font-size: 4rem;
 }
 
 ul {
-  display: flexbox;
+	display: flexbox;
 }
 
 li {
-  /* required for logo positioned in center */
-  flex-basis: 80px;
-  list-style: none;
+	/* required for logo positioned in center */
+	flex-basis: 80px;
+	list-style: none;
 }
 
 a {
-  padding: 0.5em;
-  text-decoration: none;
-  color: #bf962c;
-  font-family: parklane;
-  font-size: clamp(1rem, 0.5714rem + 1.9048vw, 2rem);
+	padding: 0.5em;
+	text-decoration: none;
+	color: #bf962c;
+	font-family: parklane;
+	font-size: clamp(1rem, 0.5714rem + 1.9048vw, 2rem);
 }
 
 a:hover {
-  color: #ffd0bc;
-  text-decoration: underline;
+	color: #ffd0bc;
+	text-decoration: underline;
 }
 
 .hidden {
-  display: none;
+	display: none;
 }
 
 .logo {
-  display: hidden;
+	display: hidden;
 }
 
 #burger_wrapper {
-  display: flex;
-  justify-content: space-between;
+	display: flex;
+	justify-content: space-between;
 }
 
 #burger_logo img {
-  height: 4rem;
+	height: 4rem;
 }
 
 #menu_logo {
-  max-width: 100%;
-  height: auto;
+	max-width: 100%;
+	height: auto;
 }
 
 #menuknap {
-  color: #bf962c;
+	color: #bf962c;
 }
 
 /******* DESKTOP / Media querries *********/
 @media (min-width: 600px) {
-  /******* Menu - Media querries *********/
+	/******* Menu - Media querries *********/
 
-  #menuknap {
-    display: none;
-  }
+	#menuknap {
+		display: none;
+	}
 
-  ul {
-    display: flex;
-    justify-content: space-between;
-  }
+	ul {
+		display: flex;
+		justify-content: space-between;
+	}
 
-  .hidden {
-    display: flex;
-  }
+	.hidden {
+		display: flex;
+	}
 
-  li:first-child,
-  li:nth-child(n + 4) {
-    order: 3;
-  }
+	li:first-child,
+	li:nth-child(n + 4) {
+		order: 3;
+	}
 
-  li:nth-child(n + 4) {
-    text-align: right;
-  }
+	li:nth-child(n + 4) {
+		text-align: right;
+	}
 
-  #burger_logo {
-    display: none;
-  }
+	#burger_logo {
+		display: none;
+	}
 
-  #menu.hidden {
-    transform: translateX(0);
-    opacity: 1;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    margin: 0;
-    padding-bottom: 0;
-  }
+	#menu.hidden {
+		transform: translateX(0);
+		opacity: 1;
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+		margin: 0;
+		padding-bottom: 0;
+	}
 }
