@@ -18,9 +18,12 @@ h1 {
   color: #bf962c;
 }
 
-main .first {
-  margin: 0;
-  padding: 0;
+h3 {
+  font-size: clamp(1.2rem, 0.6429rem + 2.4762vw, 2.5rem);
+}
+
+p {
+  font-size: clamp(1rem, 0.5714rem + 1.9048vw, 2rem);
 }
 
 header {
@@ -32,6 +35,32 @@ header {
 
 section {
   margin-bottom: 2vw;
+}
+
+/******* Knapper *********/
+
+button {
+  background-color: #1f2735;
+  border: 2px solid #bf962c;
+  display: block;
+  cursor: pointer;
+  color: #dfc175;
+  font-size: 17px;
+  padding: 16px 31px;
+  text-decoration: none;
+}
+button:hover {
+  background-color: #ffd0bc;
+  color: #1f2735;
+}
+
+#social_knap {
+  width: 100%;
+  gap: 10px;
+}
+
+#cocktail_knap {
+  justify-content: center;
 }
 
 /******* Menu *********/
@@ -121,5 +150,14 @@ a:hover {
     justify-content: space-around;
     margin: 0;
     padding-bottom: 0;
+  }
+
+  #second {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+  }
+
+  #velkommen {
+    grid-column-end: 2fr;
   }
 }
