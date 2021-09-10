@@ -1,18 +1,90 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
+/** @format */
+
+/*------------------- MENU -------------------*/
+
+/*------------------- MAIN -------------------*/
+@font-face {
+	font-family: parklane;
+	src: url(../assets/fonts/parklanenf-webfont.woff2);
 }
 
-@font-face {
-  font-family: parklane;
-  src: url(../parklanenf-webfont.woff2);
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+
+	text-decoration: none;
+}
+
+body {
+	background: #1f2735;
+	color: #c7b588;
+}
+
+main,
+footer {
+	display: grid;
+	grid-template-columns:
+		minmax(1rem, 1fr)
+		minmax(auto, 1200px)
+		minmax(1rem, 1fr);
+}
+
+main > *,
+footer {
+	grid-column: 2;
+	padding: 1.3rem;
 }
 
 img,
 video {
-  display: block;
-  width: 100%;
-  height: auto;
+	display: block;
+	width: 100%;
+	height: auto;
+	margin-bottom: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: #bf962c;
+	font-family: "parklane", sans-serif;
+
+	margin-bottom: 1rem;
+}
+
+h2 {
+}
+h3 {
+}
+
+p {
+	font-family: "Songti TC", serif;
+	margin-bottom: 1rem;
+}
+
+a {
+	color: #c7b588;
+}
+
+/*------------------- FOOTER -------------------*/
+footer {
+	border-top: 2px solid #bf962c;
+	margin-top: 3rem;
+	padding-bottom: 2rem;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+footer p {
+	text-align: center;
+	margin-top: 1rem;
+	font-size: 0.8rem;
 }
 
 main {
