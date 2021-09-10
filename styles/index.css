@@ -48,6 +48,7 @@ button {
   font-size: 17px;
   padding: 16px 31px;
   text-decoration: none;
+  transition: 0.3s;
 }
 button:hover {
   background-color: #ffd0bc;
@@ -55,12 +56,15 @@ button:hover {
 }
 
 #social_knap {
-  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 10px;
 }
 
 #cocktail_knap {
+  display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 /******* Menu *********/
@@ -84,6 +88,7 @@ a {
   text-decoration: none;
   color: #bf962c;
   font-family: parklane;
+  font-size: clamp(1rem, 0.5714rem + 1.9048vw, 2rem);
 }
 
 a:hover {
@@ -106,6 +111,11 @@ a:hover {
 
 #burger_logo img {
   height: 4rem;
+}
+
+#menu_logo {
+  max-width: 100%;
+  height: auto;
 }
 
 #menuknap {
