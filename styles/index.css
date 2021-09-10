@@ -1,0 +1,18 @@
+body {
+  background-color: #1f2735;
+}
+
+h1,
+h2,
+h3,
+p {
+  color: #bf962c;
+}
+
+h1 {
+  font-size: 4rem;
+  background-image: url(../Img/placeholder.png);
+  background-size: contain;
+  text-align: center;
+  font-family: parklane;
+}

@@ -3,6 +3,11 @@
   margin: 0;
 }
 
+@font-face {
+  font-family: parklane;
+  src: url(../parklanenf-webfont.woff2);
+}
+
 img,
 video {
   display: block;
