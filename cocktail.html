@@ -1,15 +1,112 @@
+<!-- @format -->
+
 <!DOCTYPE html>
 <html lang="da">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="styles/_common.css" />
+		<link rel="stylesheet" href="styles/cocktails.css" />
 
-    <link rel="stylesheet" href="styles/cocktail.css">
-    <link rel="stylesheet" href="styles/_common.css">
-    <title>Cocktail Club | Cocktails</title>
-</head>
-<body>
-    
-</body>
+		<title>Cocktail Club | Cocktails</title>
+	</head>
+	<body>
+		<header>
+			<nav>
+				<div id="burger_wrapper">
+					<div>
+						<a id="burger_logo" href="index.html"
+							><img src="/assets/images/logo.svg" alt="logo"
+						/></a>
+					</div>
+					<div id="menuknap">☰</div>
+				</div>
+				<ul id="menu" class="hidden">
+					<li>
+						<a class="logo" href="#"
+							><img class="logo" src="/assets/images/logo.svg" alt="logo"
+						/></a>
+					</li>
+					<li><a href="#">Velkommen</a></li>
+					<li><a href="#">Om os</a></li>
+					<li><a href="#">Cocktails</a></li>
+					<li><a href="#">Kontakt</a></li>
+				</ul>
+			</nav>
+		</header>
+		<main>
+			<ul class="filter_btn_container">
+				<li><button>Vodka</button></li>
+				<li><button>Rom</button></li>
+				<li><button>Sherry</button></li>
+				<li><button>Gin</button></li>
+				<li><button>Vin</button></li>
+				<li><button>Whiskey</button></li>
+				<li><button>Tequila</button></li>
+				<li><button>Diverse</button></li>
+			</ul>
+			<section>
+				<div class="h2_container">
+					<h2>Cocktails</h2>
+				</div>
+				<div class="produkt_visning">
+					<article>
+						<div>
+							<img src="assets/images/kasper.png" alt="" />
+							<span>Cocktail Type 1</span>
+						</div>
+					</article>
+					<article>
+						<div>
+							<img src="assets/images/kasper.png" alt="" />
+							<span>Cocktail Type 1</span>
+						</div>
+					</article>
+					<article>
+						<div>
+							<img src="assets/images/kasper.png" alt="" />
+							<span>Cocktail Type 1</span>
+						</div>
+					</article>
+				</div>
+			</section>
+		</main>
+		<footer>
+			<div class="line"></div>
+			<p>
+				CVR: 123456789 &bull; Cocktailvej 18, Frederiksberg 2000 &bull; Cocktail
+				Club
+			</p>
+			<p>
+				<a href="index.html">Hjem</a> &bull;
+				<a href="cocktail.html">Cocktails</a> &bull;
+				<a href="about.html">Om os</a> &bull;<a href="kontakt.html">Kontakt</a>
+			</p>
+		</footer>
+
+		<!-- Template -->
+		<template>
+			<div class="produkt_visning">
+				<article>
+					<div>
+						<img src="assets/images/kasper.png" alt="" />
+						<span>Cocktail Type 1</span>
+					</div>
+				</article>
+				<article>
+					<div>
+						<img src="assets/images/kasper.png" alt="" />
+						<span>Cocktail Type 1</span>
+					</div>
+				</article>
+				<article>
+					<div>
+						<img src="assets/images/kasper.png" alt="" />
+						<span>Cocktail Type 1</span>
+					</div>
+				</article>
+			</div>
+		</template>
+	</body>
 </html>
