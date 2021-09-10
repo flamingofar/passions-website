@@ -51,19 +51,7 @@
 					<h2>Cocktails</h2>
 				</div>
 				<div class="produkt_visning">
-					<article>
-						<div>
-							<img src="assets/images/kasper.png" alt="" />
-							<span>Cocktail Type 1</span>
-						</div>
-					</article>
-					<article>
-						<div>
-							<img src="assets/images/kasper.png" alt="" />
-							<span>Cocktail Type 1</span>
-						</div>
-					</article>
-					<article>
+					<article class="produkt">
 						<div>
 							<img src="assets/images/kasper.png" alt="" />
 							<span>Cocktail Type 1</span>
@@ -71,6 +59,29 @@
 					</article>
 				</div>
 			</section>
+			<!-- ------- MODAL ------- -->
+			<div class="pop-up">
+				<div class="modal">
+					<div class="luk"></div>
+					<div class="produkt_billede">
+						<img src="./assets/images/kasper.png" alt="" />
+					</div>
+					<h2>Cocktail Type 1</h2>
+					<div>
+						<h3>Beskrivelse</h3>
+						<p>
+							Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi
+							quidem quae error inventore ipsa facere fuga. Earum eligendi
+							perspiciatis quo, rem molestias magni qui soluta vitae consectetur
+							consequatur. Obcaecati, excepturi!
+						</p>
+					</div>
+					<div class="knapper">
+						<button>Læs Mere</button>
+						<button>Opskrift</button>
+					</div>
+				</div>
+			</div>
 		</main>
 		<footer>
 			<div class="line"></div>
@@ -88,19 +99,7 @@
 		<!-- Template -->
 		<template>
 			<div class="produkt_visning">
-				<article>
-					<div>
-						<img src="assets/images/kasper.png" alt="" />
-						<span>Cocktail Type 1</span>
-					</div>
-				</article>
-				<article>
-					<div>
-						<img src="assets/images/kasper.png" alt="" />
-						<span>Cocktail Type 1</span>
-					</div>
-				</article>
-				<article>
+				<article class="produkt">
 					<div>
 						<img src="assets/images/kasper.png" alt="" />
 						<span>Cocktail Type 1</span>
@@ -108,5 +107,6 @@
 				</article>
 			</div>
 		</template>
+		<script src="./js/app.js"></script>
 	</body>
 </html>

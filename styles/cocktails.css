@@ -58,6 +58,61 @@ article span {
 	padding: 1rem 0;
 }
 
+/*-------------- MODAL POP-UP --------------*/
+
+.pop-up {
+	position: relative;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background: rgba(0, 0, 0, 0.699);
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	z-index: 10;
+}
+
+.modal {
+	width: 75%;
+	border: 1.5px solid #bf962c;
+	border-radius: 10px;
+	background: #1f2735;
+	padding: 1.5rem 1.5rem;
+}
+
+.knapper {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	column-gap: 0.5rem;
+}
+
+.knapper button {
+	font-size: 1.15rem;
+}
+
+.luk {
+	width: 2rem;
+}
+.luk:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 2rem;
+	height: 2rem;
+	color: #e01515;
+
+	z-index: 20;
+}
+
+/*-------------- MEDIA QUERIES --------------*/
+
 @media screen and (min-width: 600px) {
 	ul {
 		justify-content: flex-start;
