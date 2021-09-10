@@ -73,11 +73,11 @@ button:hover {
   font-size: 4rem;
 }
 
-ul {
+#menu {
   display: flexbox;
 }
 
-li {
+.menu {
   /* required for logo positioned in center */
   flex-basis: 80px;
   list-style: none;
@@ -130,7 +130,7 @@ a:hover {
     display: none;
   }
 
-  ul {
+  #menu {
     display: flex;
     justify-content: space-between;
   }
@@ -139,12 +139,12 @@ a:hover {
     display: flex;
   }
 
-  li:first-child,
+  #menu li:first-child,
   li:nth-child(n + 4) {
     order: 3;
   }
 
-  li:nth-child(n + 4) {
+  #menu li:nth-child(n + 4) {
     text-align: right;
   }
 
