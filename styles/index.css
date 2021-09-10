@@ -24,7 +24,6 @@ main .first {
 
 ul {
   display: flexbox;
-  align-items: center;
 }
 
 li {
@@ -35,10 +34,20 @@ li {
 
 a {
   padding: 0.5em;
+  text-decoration: none;
+  color: #bf962c;
+}
+
+a:hover {
+  color: purple;
 }
 
 .hidden {
   display: none;
+}
+
+.logo {
+  display: hidden;
 }
 
 #burger_wrapper {
@@ -55,6 +64,10 @@ a {
   ul {
     display: flex;
     justify-content: space-between;
+  }
+
+  .logo {
+    display: flex;
   }
 
   li:first-child,
