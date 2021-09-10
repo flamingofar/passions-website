@@ -2,11 +2,10 @@ body {
   background-color: #1f2735;
 }
 
-h1,
 h2,
 h3,
 p {
-  color: #bf962c;
+  color: #dfc175;
 }
 
 h1 {
@@ -15,4 +14,69 @@ h1 {
   background-size: contain;
   text-align: center;
   font-family: parklane;
+  color: #bf962c;
+}
+
+main .first {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  display: flexbox;
+  align-items: center;
+}
+
+li {
+  /* required for logo positioned in center */
+  flex-basis: 80px;
+  list-style: none;
+}
+
+a {
+  padding: 0.5em;
+}
+
+.hidden {
+  display: none;
+}
+
+#burger_wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+/******* DESKTOP / Media querries *********/
+@media (min-width: 600px) {
+  #menuknap {
+    display: none;
+  }
+
+  ul {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  li:first-child,
+  li:nth-child(n + 4) {
+    order: 3;
+  }
+
+  li:nth-child(n + 4) {
+    text-align: right;
+  }
+
+  #burger_logo {
+    display: none;
+  }
+
+  #menu.hidden {
+    transform: translateX(0);
+    opacity: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0;
+    padding-bottom: 0;
+  }
 }

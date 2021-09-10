@@ -86,3 +86,8 @@ footer p {
 	margin-top: 1rem;
 	font-size: 0.8rem;
 }
+
+main {
+  padding: 2vw;
+  margin: 2vw;
+}
