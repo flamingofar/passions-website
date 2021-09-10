@@ -9,9 +9,10 @@ p {
 }
 
 h1 {
-  font-size: 4rem;
-  background-image: url(../Img/placeholder.png);
-  background-size: contain;
+  font-size: clamp(4rem, 1.4286rem + 11.4286vw, 10rem);
+  background-image: url(../assets/images/bg.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
   text-align: center;
   font-family: parklane;
   color: #bf962c;
@@ -20,6 +21,23 @@ h1 {
 main .first {
   margin: 0;
   padding: 0;
+}
+
+header {
+  padding-left: 2vw;
+  margin-left: 2vw;
+  padding-right: 2vw;
+  margin-right: 2vw;
+}
+
+section {
+  margin-bottom: 2vw;
+}
+
+/******* Menu *********/
+
+#menuknap {
+  font-size: 4rem;
 }
 
 ul {
@@ -36,10 +54,12 @@ a {
   padding: 0.5em;
   text-decoration: none;
   color: #bf962c;
+  font-family: parklane;
 }
 
 a:hover {
-  color: purple;
+  color: #ffd0bc;
+  text-decoration: underline;
 }
 
 .hidden {
@@ -55,8 +75,18 @@ a:hover {
   justify-content: space-between;
 }
 
+#burger_logo img {
+  height: 4rem;
+}
+
+#menuknap {
+  color: #bf962c;
+}
+
 /******* DESKTOP / Media querries *********/
 @media (min-width: 600px) {
+  /******* Menu - Media querries *********/
+
   #menuknap {
     display: none;
   }
@@ -66,7 +96,7 @@ a:hover {
     justify-content: space-between;
   }
 
-  .logo {
+  .hidden {
     display: flex;
   }
 
