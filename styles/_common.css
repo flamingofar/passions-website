@@ -14,3 +14,8 @@ video {
   width: 100%;
   height: auto;
 }
+
+main {
+  padding: 2vw;
+  margin: 2vw;
+}
