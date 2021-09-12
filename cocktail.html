@@ -12,6 +12,7 @@
 		<title>Cocktail Club | Cocktails</title>
 	</head>
 	<body>
+		<div class="background"></div>
 		<header>
 			<nav>
 				<div id="burger_wrapper">
@@ -24,14 +25,14 @@
 				</div>
 				<ul id="menu" class="hidden">
 					<li>
-						<a class="logo" href="#"
-							><img class="logo" src="/assets/images/logo.svg" alt="logo"
+						<a class="hidden" href="index.html"
+							><img id="menu_logo" src="/assets/images/logo.svg" alt="logo"
 						/></a>
 					</li>
-					<li><a href="#">Velkommen</a></li>
-					<li><a href="#">Om os</a></li>
-					<li><a href="#">Cocktails</a></li>
-					<li><a href="#">Kontakt</a></li>
+					<li><a href="index.html">Welcome</a></li>
+					<li><a href="about.html">About</a></li>
+					<li><a href="cocktail.html">Cocktails</a></li>
+					<li><a href="kontakt.html">Contact</a></li>
 				</ul>
 			</nav>
 		</header>
@@ -50,35 +51,30 @@
 				<div class="h2_container">
 					<h2>Cocktails</h2>
 				</div>
-				<div class="produkt_visning">
-					<article class="produkt">
-						<div>
-							<img src="assets/images/kasper.png" alt="" />
-							<span>Cocktail Type 1</span>
-						</div>
-					</article>
-				</div>
+				<div class="produkt_visning"></div>
 			</section>
 			<!-- ------- MODAL ------- -->
-			<div class="pop-up">
+			<div class="pop-up hide">
 				<div class="modal">
 					<div class="luk"></div>
 					<div class="produkt_billede">
 						<img src="./assets/images/kasper.png" alt="" />
 					</div>
-					<h2>Cocktail Type 1</h2>
-					<div>
-						<h3>Beskrivelse</h3>
-						<p>
-							Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi
-							quidem quae error inventore ipsa facere fuga. Earum eligendi
-							perspiciatis quo, rem molestias magni qui soluta vitae consectetur
-							consequatur. Obcaecati, excepturi!
-						</p>
-					</div>
-					<div class="knapper">
-						<button>Læs Mere</button>
-						<button>Opskrift</button>
+					<div class="txt-container">
+						<h2>Cocktail Type 1</h2>
+						<div>
+							<h3>Beskrivelse</h3>
+							<p>
+								Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+								Eligendi quidem quae error inventore ipsa facere fuga. Earum
+								eligendi perspiciatis quo, rem molestias magni qui soluta vitae
+								consectetur consequatur. Obcaecati, excepturi!
+							</p>
+						</div>
+						<div class="knapper">
+							<button class="read-more">Læs Mere</button>
+							<button class="recipe">Opskrift</button>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -98,14 +94,12 @@
 
 		<!-- Template -->
 		<template>
-			<div class="produkt_visning">
-				<article class="produkt">
-					<div>
-						<img src="assets/images/kasper.png" alt="" />
-						<span>Cocktail Type 1</span>
-					</div>
-				</article>
-			</div>
+			<article class="produkt">
+				<div>
+					<img src="assets/images/kasper.png" alt="" />
+					<span class="name">Cocktail Type 1</span>
+				</div>
+			</article>
 		</template>
 		<script src="./js/app.js"></script>
 	</body>

@@ -61,7 +61,6 @@ article span {
 /*-------------- MODAL POP-UP --------------*/
 
 .pop-up {
-	position: relative;
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -77,6 +76,7 @@ article span {
 }
 
 .modal {
+	position: relative;
 	width: 75%;
 	border: 1.5px solid #bf962c;
 	border-radius: 10px;
@@ -97,23 +97,53 @@ article span {
 }
 
 .luk {
+	position: relative;
 	width: 2rem;
+	position: absolute;
+	right: -13px;
+	top: -13px;
+
+	width: 2.5rem;
+	height: 2.5rem;
+	border-radius: 50%;
+	border: 1.5px solid #bf962c;
+	background: #1f2735;
+
+	cursor: pointer;
 }
-.luk:before {
+.luk::before,
+.luk::after {
 	content: "";
 	position: absolute;
-	top: 0;
-	left: 0;
-	width: 2rem;
-	height: 2rem;
-	color: #e01515;
+	top: 17.5px;
+	right: 5px;
+	width: 1.7rem;
+	height: 2px;
+	border-radius: 999px;
+	background: #bf962c;
+
+	transform: rotate(45deg);
+	transform-origin: 50% 50%;
 
 	z-index: 20;
+}
+.luk::after {
+	transform: rotate(-45deg);
+}
+
+.hide {
+	display: none;
 }
 
 /*-------------- MEDIA QUERIES --------------*/
 
 @media screen and (min-width: 600px) {
+	.produkt > div > img {
+		aspect-ratio: 4/3;
+		object-fit: cover;
+		object-position: top center;
+	}
+
 	ul {
 		justify-content: flex-start;
 	}
@@ -148,5 +178,40 @@ article span {
 		width: 80%;
 		margin: 0 auto;
 		padding-left: 1.65rem;
+	}
+
+	/* MODAL */
+	.modal {
+		padding: 0;
+		width: 90%;
+		display: flex;
+		flex-direction: row;
+	}
+	.knapper button {
+		font-size: 1.2rem;
+		width: 30%;
+	}
+
+	.produkt_billede {
+		flex: 1;
+		border-radius: 10px 0 0 10px;
+	}
+	.produkt_billede img {
+		height: 100%;
+		object-fit: cover;
+		border-radius: 10px 0 0 10px;
+	}
+	.txt-container {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-evenly;
+		padding-inline: 1.5rem;
+		flex: 1;
+	}
+
+	.modal img {
+		width: 100%;
+
+		object-fit: cover;
 	}
 }
