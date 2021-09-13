@@ -79,7 +79,6 @@ function filtrerCocktails() {
 	filter = this.dataset.alkohol;
 	document.querySelector(".active_filter").classList.remove("active_filter");
 	this.classList.add("active_filter");
-	console.log(filter);
 
 	// let firstLetter = filter.charAt(0).toUpperCase() + filter.slice(1);
 
@@ -89,7 +88,6 @@ function filtrerCocktails() {
 }
 
 function popUpHandler(cocktail) {
-	console.log(cocktail);
 	popUp.classList.remove("hide");
 	// Luk-knap funktion
 	lukBtn.addEventListener("click", () => {
@@ -102,6 +100,11 @@ function popUpHandler(cocktail) {
 	});
 
 	popUp.querySelector("img").src = `${images}${cocktail.billede_navn}.jpg`;
+	popUp.addEventListener("click", (e) => {
+		if (e.explicitOriginalTarget.classList == "pop-up") {
+			popUp.classList.add("hide");
+		}
+	});
 }
 
 function showSinglePage(cocktail) {
