@@ -14,8 +14,14 @@ section > div {
 
 .produkt_visning {
 	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+	grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
 	gap: 2rem;
+}
+
+.produkt > div > img {
+	aspect-ratio: 4/3;
+	object-fit: cover;
+	object-position: top center;
 }
 
 article {
@@ -131,6 +137,12 @@ article span {
 	transform: rotate(-45deg);
 }
 
+.produkt_billede img {
+	aspect-ratio: 4/3;
+	object-fit: cover;
+	object-position: top center;
+}
+
 .hide {
 	display: none;
 }
@@ -138,12 +150,6 @@ article span {
 /*-------------- MEDIA QUERIES --------------*/
 
 @media screen and (min-width: 600px) {
-	.produkt > div > img {
-		aspect-ratio: 4/3;
-		object-fit: cover;
-		object-position: top center;
-	}
-
 	ul {
 		justify-content: flex-start;
 	}
@@ -154,6 +160,21 @@ article span {
 
 	.produkt_visning {
 		padding-inline: 8rem;
+	}
+
+	.produkt {
+		overflow: hidden;
+	}
+
+	.produkt img {
+		transform-origin: bottom;
+		transform: scale(1);
+		transition: 250ms ease-in-out;
+	}
+
+	.produkt:hover img {
+		transform: scale(1.01);
+		transition: 250ms ease-out;
 	}
 
 	.filter_btn_container {

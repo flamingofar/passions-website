@@ -22,15 +22,21 @@ const popUp = document.querySelector(".pop-up");
 const lukBtn = document.querySelector(".luk");
 const readMore = document.querySelector(".read-more");
 const recipe = document.querySelector(".recipe");
+const btns = document.querySelectorAll(".filter_btn_container button");
 
 // Variabler
 const images = "../assets/images/cocktails/";
+let filter = "alle";
 
 window.addEventListener("DOMContentLoaded", start);
 
 function start() {
 	// Load JSON
 	loadJSON();
+
+	btns.forEach((btn) => {
+		btn.addEventListener("click", filtrerCocktails);
+	});
 }
 
 function showSinglePage() {
@@ -46,7 +52,6 @@ async function loadJSON() {
 
 	cocktails = await JSONData.json();
 	console.log(cocktails);
-	console.log(cocktails[0].name);
 
 	vis(cocktails);
 }
@@ -54,24 +59,41 @@ async function loadJSON() {
 function vis(json) {
 	const cocktailTemplate = document.querySelector("template");
 	const container = document.querySelector(".produkt_visning");
+	container.textContent = "";
 
 	json.forEach((el) => {
 		let klon = cocktailTemplate.cloneNode(true).content;
 		klon.querySelector(".name").textContent = el.name;
 
-		klon.querySelector("img").src = `${images}${el.billede_navn}.jpg`;
-		// klon.querySelector(".kort").textContent = el.kortbeskrivelse;
-		// klon.querySelector("img").src = `${images}${el.billednavn}-md.jpg`;
-		// klon.querySelector(".country").textContent = `Land: ${el.oprindelsesregion}`;
-		// klon.querySelector(".pris-tag").textContent = `${el.pris} kr.`;
+		if (filter == el.alkohol_type || filter == "alle") {
+			klon.querySelector("img").src = `${images}${el.billede_navn}.jpg`;
+			// klon.querySelector(".kort").textContent = el.kortbeskrivelse;
+			// klon.querySelector("img").src = `${images}${el.billednavn}-md.jpg`;
+			// klon.querySelector(".country").textContent = `Land: ${el.oprindelsesregion}`;
+			// klon.querySelector(".pris-tag").textContent = `${el.pris} kr.`;
 
-		// Vis Pop-up
-		klon.querySelector(".produkt").addEventListener("click", () => {
-			popUpHandler(el);
-		});
+			// Vis Pop-up
+			klon.querySelector(".produkt").addEventListener("click", () => {
+				popUpHandler(el);
+			});
 
-		container.appendChild(klon);
+			container.appendChild(klon);
+		}
 	});
+}
+
+// Filtrering
+function filtrerCocktails() {
+	filter = this.dataset.alkohol;
+	document.querySelector(".active_filter").classList.remove("active_filter");
+	this.classList.add("active_filter");
+	console.log(filter);
+
+	// let firstLetter = filter.charAt(0).toUpperCase() + filter.slice(1);
+
+	// document.querySelector("h2").textContent = firstLetter;
+
+	vis(cocktails);
 }
 
 function popUpHandler(cocktail) {
