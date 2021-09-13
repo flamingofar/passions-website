@@ -20,7 +20,6 @@ let settings = {
 const produkter = document.querySelectorAll(".produkt");
 const popUp = document.querySelector(".pop-up");
 const lukBtn = document.querySelector(".luk");
-const readMore = document.querySelector(".read-more");
 const recipe = document.querySelector(".recipe");
 const btns = document.querySelectorAll(".filter_btn_container button");
 
@@ -37,13 +36,6 @@ function start() {
 	btns.forEach((btn) => {
 		btn.addEventListener("click", filtrerCocktails);
 	});
-}
-
-function showSinglePage() {
-	console.log("Singlepage vises!");
-}
-function showRecipe() {
-	console.log("Opskrift vises!");
 }
 
 // Rest API Call
@@ -104,10 +96,15 @@ function popUpHandler(cocktail) {
 		popUp.classList.add("hide");
 	});
 
-	// Læs mere knap funktion
-	readMore.addEventListener("click", showSinglePage);
 	// Opskrift knap funktion
-	recipe.addEventListener("click", showRecipe);
+	recipe.addEventListener("click", () => {
+		showSinglePage(cocktail);
+	});
 
 	popUp.querySelector("img").src = `${images}${cocktail.billede_navn}.jpg`;
 }
+
+function showSinglePage(cocktail) {
+	location.href = `_single-page.html?id=${cocktail._id}`;
+}
+//613b0759d943be7d000b252f

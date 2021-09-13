@@ -1,0 +1,118 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="da">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<link rel="stylesheet" href="styles/about.css" />
+		<link rel="stylesheet" href="styles/_common.css" />
+		<title>Cocktail Club | Cocktail</title>
+	</head>
+	<body>
+		<div class="background"></div>
+		<header>
+			<nav class="navigations_menu">
+				<div id="burger_wrapper">
+					<div>
+						<a id="burger_logo" href="index.html"
+							><img src="/assets/images/logo.svg" alt="logo"
+						/></a>
+					</div>
+					<div id="menuknap">☰</div>
+				</div>
+				<ul id="menu" class="hidden">
+					<li>
+						<a class="hidden" href="index.html"
+							><img id="menu_logo" src="/assets/images/logo.svg" alt="logo"
+						/></a>
+					</li>
+					<li><a href="index.html">Welcome</a></li>
+					<li><a class="active" href="about.html">About</a></li>
+					<li><a href="cocktail.html">Cocktails</a></li>
+					<li><a href="kontakt.html">Contact</a></li>
+				</ul>
+			</nav>
+		</header>
+		<main>
+			<h2>Ret</h2>
+			<article class="cocktail" style="cursor: initial">
+				<img src="#" alt="" />
+
+				<div class="details">
+					<p class="kort"></p>
+
+					<div class="small-details">
+						<p class="country"></p>
+						<div class="pris">-</div>
+					</div>
+				</div>
+			</article>
+			<button>Tilbage</button>
+		</main>
+		<footer>
+			<div class="line"></div>
+			<p>
+				CVR: 123456789 &bull; Cocktailvej 18, Frederiksberg 2000 &bull; Cocktail
+				Club
+			</p>
+			<p>
+				<a href="index.html">Hjem</a> &bull;
+				<a href="cocktail.html">Cocktails</a> &bull;
+				<a href="about.html">Om os</a> &bull;<a href="kontakt.html">Kontakt</a>
+			</p>
+		</footer>
+		<script>
+			const URlParams = new URLSearchParams(window.location.search);
+			const id = URlParams.get("id");
+
+			// RestDB detaljer
+			const db = `https://cocktails-2d4e.restdb.io/rest/cocktails/${id}`;
+			const APIKey = "6138eab743cedb6d1f97ee7b";
+
+			let settings = {
+				async: true,
+				crossDomain: true,
+				url: db,
+				method: "GET",
+				headers: {
+					"content-type": "application/json",
+					"x-apikey": APIKey,
+					"cache-control": "no-cache",
+				},
+			};
+
+			window.addEventListener("DOMContentLoaded", start);
+
+			function start() {
+				loadJSON();
+			}
+
+			// Rest API Call
+			async function loadJSON() {
+				const JSONData = await fetch(db, settings);
+				cocktail = await JSONData.json();
+				console.log(cocktail);
+				vis(cocktail);
+			}
+
+			function vis(json) {
+				const cocktail = document.querySelector(".cocktail");
+				const images = "./assets/images/cocktails/";
+				document.querySelector("h2").textContent = json.name;
+
+				// ret.querySelector(".kort").textContent = retter.langbeskrivelse;
+				cocktail.querySelector("img").src = `${images}${json.billede_navn}.jpg`;
+				// ret.querySelector(
+				// 	".country"
+				// ).textContent = `Land: ${retter.oprindelsesregion}`;
+				// ret.querySelector(".pris").textContent = `${retter.pris} kr.`;
+				document.querySelector("button").addEventListener("click", () => {
+					history.back();
+				});
+			}
+		</script>
+	</body>
+</html>

@@ -226,6 +226,14 @@ a:hover {
 	p {
 		font-size: 1.3rem;
 	}
+	button {
+		transition: 0.3s;
+	}
+	button:hover {
+		background-color: var(--hover-color);
+		color: var(--main-color);
+	}
+
 	/******* Menu - Media querries *********/
 
 	#menuknap {
