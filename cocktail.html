@@ -21,6 +21,7 @@
 							><img src="/assets/images/logo.svg" alt="logo"
 						/></a>
 					</div>
+					<!--TODO - Style -->
 					<div id="menuknap">☰</div>
 				</div>
 				<ul id="menu" class="hidden">
@@ -31,21 +32,22 @@
 					</li>
 					<li><a href="index.html">Welcome</a></li>
 					<li><a href="about.html">About</a></li>
-					<li><a href="cocktail.html">Cocktails</a></li>
+					<li><a class="active" href="cocktail.html">Cocktails</a></li>
 					<li><a href="kontakt.html">Contact</a></li>
 				</ul>
 			</nav>
 		</header>
 		<main>
 			<ul class="filter_btn_container">
-				<li><button>Vodka</button></li>
-				<li><button>Rom</button></li>
-				<li><button>Sherry</button></li>
-				<li><button>Gin</button></li>
-				<li><button>Vin</button></li>
-				<li><button>Whiskey</button></li>
-				<li><button>Tequila</button></li>
-				<li><button>Diverse</button></li>
+				<li><button class="active_filter" data-alkohol="alle">Alle</button></li>
+				<li><button data-alkohol="vodka">Vodka</button></li>
+				<li><button data-alkohol="rom">Rom</button></li>
+				<li><button data-alkohol="sherry">Sherry</button></li>
+				<li><button data-alkohol="gin">Gin</button></li>
+				<li><button data-alkohol="vin">Vin</button></li>
+				<li><button data-alkohol="whiskey">Whiskey</button></li>
+				<li><button data-alkohol="tequila">Tequila</button></li>
+				<li><button data-alkohol="diverse">Diverse</button></li>
 			</ul>
 			<section>
 				<div class="h2_container">
