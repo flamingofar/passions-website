@@ -7,8 +7,9 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-		<link rel="stylesheet" href="styles/about.css" />
 		<link rel="stylesheet" href="styles/_common.css" />
+		<link rel="stylesheet" href="styles/_single-pages.css" />
+
 		<title>Cocktail Club | Cocktail</title>
 	</head>
 	<body>
@@ -37,20 +38,45 @@
 			</nav>
 		</header>
 		<main>
-			<h2>Ret</h2>
+			<button class="back">&#10554;</button>
 			<article class="cocktail" style="cursor: initial">
-				<img src="#" alt="" />
-
+				<div class="container">
+					<h2></h2>
+					<div class="img-container">
+						<img src="#" alt="" />
+					</div>
+				</div>
 				<div class="details">
-					<p class="kort"></p>
-
+					<h3>Beskrivelse</h3>
+					<p class="beskrivelse"></p>
+				</div>
+				<div>
 					<div class="small-details">
-						<p class="country"></p>
-						<div class="pris">-</div>
+						<h3>Opskrift</h3>
+						<p>Denne opskrift er til en enkelt cocktail.</p>
+						<ul class="ingredienser">
+							<li>3 CL Campari</li>
+							<li>3 CL Noilly Part dry Vermouth</li>
+							<li>2 CL Danskvand</li>
+							<ul class="garnish">
+								<li>Isterninger</li>
+								<li>Appelsin/Citron</li>
+							</ul>
+						</ul>
+						<ul class="how-to">
+							<li>
+								Hæld Campari og Noilly Part dry Vermouth i et glas med
+								isterninger
+							</li>
+							<li>Fyl op med danskvand efter smag. Vi anbefaler ca. 2 CL</li>
+							<li>
+								Pynt med een skive appelsing eller citronskræl. Rør let rundt og
+								server.
+							</li>
+						</ul>
 					</div>
 				</div>
 			</article>
-			<button>Tilbage</button>
 		</main>
 		<footer>
 			<div class="line"></div>
@@ -64,55 +90,6 @@
 				<a href="about.html">Om os</a> &bull;<a href="kontakt.html">Kontakt</a>
 			</p>
 		</footer>
-		<script>
-			const URlParams = new URLSearchParams(window.location.search);
-			const id = URlParams.get("id");
-
-			// RestDB detaljer
-			const db = `https://cocktails-2d4e.restdb.io/rest/cocktails/${id}`;
-			const APIKey = "6138eab743cedb6d1f97ee7b";
-
-			let settings = {
-				async: true,
-				crossDomain: true,
-				url: db,
-				method: "GET",
-				headers: {
-					"content-type": "application/json",
-					"x-apikey": APIKey,
-					"cache-control": "no-cache",
-				},
-			};
-
-			window.addEventListener("DOMContentLoaded", start);
-
-			function start() {
-				loadJSON();
-			}
-
-			// Rest API Call
-			async function loadJSON() {
-				const JSONData = await fetch(db, settings);
-				cocktail = await JSONData.json();
-				console.log(cocktail);
-				vis(cocktail);
-			}
-
-			function vis(json) {
-				const cocktail = document.querySelector(".cocktail");
-				const images = "./assets/images/cocktails/";
-				document.querySelector("h2").textContent = json.name;
-
-				// ret.querySelector(".kort").textContent = retter.langbeskrivelse;
-				cocktail.querySelector("img").src = `${images}${json.billede_navn}.jpg`;
-				// ret.querySelector(
-				// 	".country"
-				// ).textContent = `Land: ${retter.oprindelsesregion}`;
-				// ret.querySelector(".pris").textContent = `${retter.pris} kr.`;
-				document.querySelector("button").addEventListener("click", () => {
-					history.back();
-				});
-			}
-		</script>
+		<script src="./js/_single-page.js"></script>
 	</body>
 </html>

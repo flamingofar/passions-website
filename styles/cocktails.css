@@ -19,7 +19,7 @@ section > div {
 }
 
 .produkt > div > img {
-	aspect-ratio: 4/3;
+	aspect-ratio: 4/4;
 	object-fit: cover;
 	object-position: top center;
 }
