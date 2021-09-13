@@ -38,7 +38,7 @@ address {
 		content: "";
 		width: 1.2px;
 		height: 10rem;
-		background: #bf962c;
+		background: var(--heading-color);
 	}
 	section h2 {
 		font-size: 2.5rem;
