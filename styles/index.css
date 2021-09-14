@@ -1,170 +1,161 @@
 /** @format */
 
 body {
-	background-color: var(--main-color);
+  background-color: var(--main-color);
 }
 
 h2,
 h3,
 p {
-	color: var(--text-color);
+  color: var(--text-color);
 }
 
 h1 {
-	font-size: clamp(4rem, 1.4286rem + 11.4286vw, 10rem);
-	/* background-image: url(../assets/images/bg.svg); */
-	background-size: cover;
-	background-repeat: no-repeat;
-	text-align: center;
-	font-family: parklane;
-	color: var(--heading-color);
+  font-size: clamp(4rem, 1.4286rem + 11.4286vw, 10rem);
+  /* background-image: url(../assets/images/bg.svg); */
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+  font-family: parklane;
+  color: var(--heading-color);
 }
 
 h3 {
-	font-size: clamp(1.2rem, 0.6429rem + 2.4762vw, 2.5rem);
+  font-size: clamp(1.2rem, 0.6429rem + 2.4762vw, 2.5rem);
 }
 
 p {
-	font-size: clamp(1rem, 0.5714rem + 1.9048vw, 2rem);
+  font-size: clamp(1rem, 0.5714rem + 1.9048vw, 2rem);
 }
 
 header {
-	padding-left: 2vw;
-	margin-left: 2vw;
-	padding-right: 2vw;
-	margin-right: 2vw;
+  padding-left: 2vw;
+  margin-left: 2vw;
+  padding-right: 2vw;
+  margin-right: 2vw;
 }
 
 section {
-	margin-bottom: 2vw;
+  margin-bottom: 2vw;
 }
 
 /******* Knapper *********/
 
 button {
-	background-color: var(--main-color);
-	border: 2px solid var(--heading-color);
-	display: block;
-	cursor: pointer;
-	color: var(--text-color);
-	font-size: 17px;
-	padding: 16px 31px;
-	text-decoration: none;
+  background-color: var(--main-color);
+  border: 2px solid var(--heading-color);
+  display: block;
+  cursor: pointer;
+  color: var(--text-color);
+  font-size: 17px;
+  padding: 16px 31px;
+  text-decoration: none;
 }
 
 #social_knap {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	gap: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
 }
 
 #cocktail_knap {
-	display: flex;
-	justify-content: center;
-	align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /******* Menu *********/
 
 #menuknap {
-	font-size: 4rem;
+  font-size: 4rem;
+  color: var(--heading-color);
 }
 
 #menu {
-	display: flexbox;
-}
-
-.menu {
-	/* required for logo positioned in center */
-	flex-basis: 80px;
-	list-style: none;
+  display: flexbox;
 }
 
 a {
-	padding: 0.5em;
-	text-decoration: none;
-	color: var(--heading-color);
-	font-family: parklane;
-	font-size: clamp(1rem, 0.5714rem + 1.9048vw, 2rem);
+  padding: 0.5em;
+  text-decoration: none;
+  color: var(--heading-color);
+  font-family: parklane;
+  font-size: clamp(1rem, 0.5714rem + 1.9048vw, 2rem);
 }
 
 a:hover {
-	color: var(--hover-color);
-	text-decoration: underline;
+  color: var(--hover-color);
+  text-decoration: underline;
 }
 
 .hidden {
-	display: none;
+  display: none;
 }
 
 .logo {
-	display: hidden;
+  display: hidden;
 }
 
 #burger_wrapper {
-	display: flex;
-	justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 #burger_logo img {
-	height: 4rem;
+  height: 4rem;
 }
 
 #menu_logo {
-	max-width: 100%;
-	height: auto;
-}
-
-#menuknap {
-	color: var(--heading-color);
+  max-width: 100%;
+  height: auto;
 }
 
 /******* DESKTOP / Media querries *********/
 @media (min-width: 600px) {
-	/******* Menu - Media querries *********/
+  /******* Menu - Media querries *********/
 
-	#menuknap {
-		display: none;
-	}
+  #menuknap {
+    display: none;
+  }
 
-	#menu {
-		display: flex;
-		justify-content: space-between;
-	}
+  #menu {
+    display: flex;
+    justify-content: space-between;
+  }
 
-	.hidden {
-		display: flex;
-	}
+  .hidden {
+    display: flex;
+  }
 
-	#menu li:first-child,
-	li:nth-child(n + 4) {
-		order: 3;
-	}
+  #menu li:first-child,
+  li:nth-child(n + 4) {
+    order: 3;
+  }
 
-	#menu li:nth-child(n + 4) {
-		text-align: right;
-	}
+  #menu li:nth-child(n + 4) {
+    text-align: right;
+  }
 
-	#burger_logo {
-		display: none;
-	}
+  #burger_logo {
+    display: none;
+  }
 
-	#menu.hidden {
-		transform: translateX(0);
-		opacity: 1;
-		display: flex;
-		align-items: center;
-		justify-content: space-around;
-		margin: 0;
-		padding-bottom: 0;
-	}
+  #menu.hidden {
+    transform: translateX(0);
+    opacity: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0;
+    padding-bottom: 0;
+  }
 
-	#second {
-		display: grid;
-		grid-template-columns: 2fr 1fr;
-	}
+  #second {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+  }
 
-	#velkommen {
-		grid-column-end: 2fr;
-	}
+  #velkommen {
+    grid-column-end: 2fr;
+  }
 }
