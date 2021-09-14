@@ -174,7 +174,7 @@ footer a {
 }
 
 #menu {
-	display: flexbox;
+	display: flex;
 }
 
 .menu {
@@ -263,10 +263,6 @@ a:hover {
 	#menu li:first-child,
 	li:nth-child(n + 4) {
 		order: 3;
-	}
-
-	#menu li:nth-child(n + 4) {
-		text-align: right;
 	}
 
 	#burger_logo {
