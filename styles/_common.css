@@ -90,6 +90,8 @@ button {
 }
 
 /*------------------- MØNSTER BACKGROUND -------------------*/
+
+/* TODO Parallax */
 .background {
 	background-image: url("../assets/images/bg.svg");
 
@@ -159,11 +161,6 @@ footer a {
 	text-align: center;
 	margin-top: 1rem;
 	font-size: 1rem;
-}
-
-main {
-	padding: 2vw;
-	margin: 2vw;
 }
 
 /******* Menu *********/
