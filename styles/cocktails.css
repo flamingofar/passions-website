@@ -204,6 +204,9 @@ article span {
 		margin: 0 auto;
 		padding-left: 1.65rem;
 	}
+	.h2_container h2 {
+		font-size: 4rem;
+	}
 
 	/* MODAL */
 	.modal {

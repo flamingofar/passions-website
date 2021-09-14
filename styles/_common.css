@@ -45,6 +45,10 @@ footer {
 	padding: 1.3rem;
 }
 
+main {
+	margin-top: 15vh;
+}
+
 img,
 video {
 	display: block;
@@ -91,7 +95,6 @@ button {
 
 /*------------------- MØNSTER BACKGROUND -------------------*/
 
-/* TODO Parallax */
 .background {
 	background-image: url("../assets/images/bg.svg");
 
@@ -244,6 +247,8 @@ a:hover {
 	}
 
 	#menu {
+		position: fixed;
+		top: 0;
 		display: flex;
 		justify-content: space-between;
 	}
@@ -258,7 +263,7 @@ a:hover {
 	}
 
 	.hidden {
-		display: flex;
+		display: block;
 	}
 
 	#menu li:first-child,
