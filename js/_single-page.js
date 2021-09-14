@@ -38,14 +38,64 @@ async function loadJSON() {
 function vis(json) {
 	const cocktail = document.querySelector(".cocktail");
 	const images = "./assets/images/cocktails/";
+	const ingredienser = cocktail.querySelector(".ingredienser li:nth-child(1)");
 	document.querySelector("h2").textContent = json.name;
 
 	cocktail.querySelector(".beskrivelse").textContent = json.lang_beskrivelse;
 	cocktail.querySelector("img").src = `${images}${json.billede_navn}.jpg`;
-	// ret.querySelector(
-	// 	".country"
-	// ).textContent = `Land: ${retter.oprindelsesregion}`;
-	// ret.querySelector(".pris").textContent = `${retter.pris} kr.`;
+
+	// Ingredienser
+	cocktail.querySelector(
+		"ul li:nth-child(1)"
+	).textContent = `${json.ingrediens_1}`;
+	cocktail.querySelector(
+		"ul li:nth-child(2)"
+	).textContent = `${json.ingrediens_2}`;
+	cocktail.querySelector(
+		"ul li:nth-child(3)"
+	).textContent = `${json.ingrediens_3}`;
+	cocktail.querySelector(
+		"ul li:nth-child(4)"
+	).textContent = `${json.ingrediens_4}`;
+	cocktail.querySelector(
+		"ul li:nth-child(5)"
+	).textContent = `${json.ingrediens_5}`;
+	cocktail.querySelector(
+		"ul li:nth-child(6)"
+	).textContent = `${json.ingrediens_6}`;
+	cocktail.querySelector(
+		"ul li:nth-child(7)"
+	).textContent = `${json.ingrediens_7}`;
+	cocktail.querySelector(
+		"ul li:nth-child(8)"
+	).textContent = `${json.ingrediens_8}`;
+
+	// Garnish
+	if (!cocktail.isterninger) {
+		cocktail.querySelector(".garnish li:nth-child(1)").textContent =
+			"Isterninger";
+	}
+	if (!cocktail.garnish) {
+		cocktail.querySelector(
+			".garnish li:nth-child(2)"
+		).textContent = `${cocktail.garnish_type}`;
+	}
+
+	// Instrukser
+	cocktail.querySelector(
+		".how-to li:nth-child(1)"
+	).textContent = `${json.instruks_1}`;
+	cocktail.querySelector(
+		".how-to li:nth-child(2)"
+	).textContent = `${json.instruks_2}`;
+	cocktail.querySelector(
+		".how-to li:nth-child(3)"
+	).textContent = `${json.instruks_3}`;
+	cocktail.querySelector(
+		".how-to li:nth-child(4)"
+	).textContent = `${json.instruks_4}`;
+
+	// Tilbage til forrige side Knap
 	document.querySelector(".back").addEventListener("click", () => {
 		history.back();
 	});

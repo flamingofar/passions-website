@@ -98,7 +98,9 @@ function popUpHandler(cocktail) {
 		showSinglePage(cocktail);
 	});
 
+	popUp.querySelector("h2").textContent = cocktail.name;
 	popUp.querySelector("img").src = `${images}${cocktail.billede_navn}.jpg`;
+	popUp.querySelector("p").textContent = `${cocktail.popup_beskrivelse}`;
 	popUp.addEventListener("click", (e) => {
 		// TODO Funktion for at kunne trykke udenfor pop-up'en og lukke den.
 		if (e.explicitOriginalTarget.classList == "pop-up") {

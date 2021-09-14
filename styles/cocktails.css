@@ -19,7 +19,6 @@ section > div {
 }
 
 .produkt > div > img {
-	aspect-ratio: 4/4;
 	object-fit: cover;
 	object-position: top center;
 }
@@ -138,7 +137,6 @@ article span {
 }
 
 .produkt_billede img {
-	aspect-ratio: 4/3;
 	object-fit: cover;
 	object-position: top center;
 }
@@ -184,7 +182,7 @@ article span {
 		justify-content: flex-start;
 		flex-direction: column;
 		margin-top: 2.7rem;
-		z-index: 20;
+		z-index: 9;
 	}
 
 	button {

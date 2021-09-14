@@ -16,7 +16,6 @@ article {
 
 .container img {
 	border-radius: 5px;
-	aspect-ratio: 1/1;
 	object-fit: cover;
 }
 
@@ -56,7 +55,6 @@ article {
 		font-size: 6rem;
 	}
 	.container img {
-		aspect-ratio: 4/4;
 		object-fit: cover;
 		object-position: center center;
 	}
