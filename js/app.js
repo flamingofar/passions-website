@@ -74,14 +74,13 @@ function vis(json) {
 	});
 }
 
-// Filtrering
+// TODO Filtrering
 function filtrerCocktails() {
 	filter = this.dataset.alkohol;
 	document.querySelector(".active_filter").classList.remove("active_filter");
 	this.classList.add("active_filter");
 
 	// let firstLetter = filter.charAt(0).toUpperCase() + filter.slice(1);
-
 	// document.querySelector("h2").textContent = firstLetter;
 
 	vis(cocktails);
@@ -101,6 +100,7 @@ function popUpHandler(cocktail) {
 
 	popUp.querySelector("img").src = `${images}${cocktail.billede_navn}.jpg`;
 	popUp.addEventListener("click", (e) => {
+		// TODO Funktion for at kunne trykke udenfor pop-up'en og lukke den.
 		if (e.explicitOriginalTarget.classList == "pop-up") {
 			popUp.classList.add("hide");
 		}

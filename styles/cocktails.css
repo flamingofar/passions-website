@@ -184,6 +184,7 @@ article span {
 		justify-content: flex-start;
 		flex-direction: column;
 		margin-top: 2.7rem;
+		z-index: 20;
 	}
 
 	button {
