@@ -1,43 +1,45 @@
 /** @format */
 
 h2 {
-	margin-top: 3rem;
+  margin-top: 3rem;
 }
 p {
-	line-height: 1.65;
-	letter-spacing: 0.1rem;
+  line-height: 1.65;
+  letter-spacing: 0.1rem;
 }
 
+/*Media querry for at ændre layout til desktop*/
 @media only screen and (min-width: 600px) {
-	section {
-		display: grid;
-		grid-template-columns: repeat(10, 1fr);
-		column-gap: 2rem;
-		hyphens: auto;
-	}
-	section img {
-		grid-column: 1/5;
-	}
-	section:first-child > div {
-		grid-column: 5/-1;
-	}
-	section:nth-child(2) > div {
-		grid-column: 1/-1;
-	}
-	section:nth-child(2) p {
-		column-count: 2;
-	}
-	section:last-child {
-		display: flex;
-		flex-direction: column;
-		align-items: flex-start;
-		justify-content: center;
-	}
-	section:last-child > div {
-		display: flex;
-		align-items: center;
-		justify-content: center;
+  /*Grid der bestemmer hvor indholdet skal befinde sig på siden*/
+  section {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    column-gap: 2rem;
+    hyphens: auto;
+  }
+  section img {
+    grid-column: 1/5;
+  }
+  section:first-child > div {
+    grid-column: 5/-1;
+  }
+  section:nth-child(2) > div {
+    grid-column: 1/-1;
+  }
+  section:nth-child(2) p {
+    column-count: 2;
+  }
+  section:last-child {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  section:last-child > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-		column-gap: 2rem;
-	}
+    column-gap: 2rem;
+  }
 }
