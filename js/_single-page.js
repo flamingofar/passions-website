@@ -34,7 +34,6 @@ async function loadJSON() {
 	vis(cocktail);
 }
 
-// TODO - Mangler RestDB opskrift detaljer
 function vis(json) {
 	const cocktail = document.querySelector(".cocktail");
 	const images = "./assets/images/cocktails/";

@@ -58,6 +58,7 @@ article span {
 	width: 100%;
 	font-size: 2rem;
 	text-align: center;
+	margin-top: 1px;
 	border: 1px solid var(--heading-color);
 
 	padding: 1rem 0;
@@ -203,7 +204,7 @@ article span {
 	/* MODAL */
 	.modal {
 		padding: 0;
-		width: 90%;
+		max-width: 50rem;
 		display: flex;
 		flex-direction: row;
 	}

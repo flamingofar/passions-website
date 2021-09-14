@@ -74,7 +74,7 @@ function vis(json) {
 	});
 }
 
-// TODO Filtrering
+// TODO Filtrering - Med checkbox
 function filtrerCocktails() {
 	filter = this.dataset.alkohol;
 	document.querySelector(".active_filter").classList.remove("active_filter");
@@ -102,7 +102,6 @@ function popUpHandler(cocktail) {
 	popUp.querySelector("img").src = `${images}${cocktail.billede_navn}.jpg`;
 	popUp.querySelector("p").textContent = `${cocktail.popup_beskrivelse}`;
 	popUp.addEventListener("click", (e) => {
-		// TODO Funktion for at kunne trykke udenfor pop-up'en og lukke den.
 		if (e.explicitOriginalTarget.classList == "pop-up") {
 			popUp.classList.add("hide");
 		}
