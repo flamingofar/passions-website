@@ -181,12 +181,13 @@ article span {
 	}
 
 	.filter_btn_container {
-		grid-column: 1;
+		position: fixed;
+		top: 25vh;
+		left: 0;
 		display: flex;
-		align-items: center;
+		align-items: flex-start;
 		justify-content: flex-start;
 		flex-direction: column;
-		margin-top: 2.7rem;
 		z-index: 9;
 	}
 

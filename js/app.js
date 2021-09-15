@@ -117,5 +117,5 @@ let bg_pattern = document.querySelector(".background");
 
 window.addEventListener("scroll", () => {
 	let scroll = window.scrollY;
-	bg_pattern.transform = `translateY: ${scroll * 0.9}px`;
+	bg_pattern.style.transform = `translateY(${scroll * 0.5}px)`;
 });
