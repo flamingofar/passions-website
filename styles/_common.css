@@ -279,10 +279,6 @@ footer a {
 		display: none;
 	}
 
-	#menu {
-		background: var(--main-color);
-	}
-
 	#menu_logo {
 		margin: 0;
 		position: static;
@@ -314,12 +310,16 @@ footer a {
 			rgba(31, 39, 53, 0.8673844537815126) 26%,
 			rgba(31, 39, 53, 1) 43%
 		);
+
+		cursor: initial;
 		z-index: 20;
 	}
 
 	.menu li {
 		margin: 0;
 		font-size: 2rem;
+		z-index: 110;
+		cursor: pointer;
 	}
 
 	/* Nulstille .hidden classen */
@@ -342,5 +342,16 @@ footer a {
 
 	#velkommen {
 		grid-column-end: 2fr;
+	}
+
+	footer p a,
+	.menu a {
+		transition: 250ms;
+	}
+
+	footer p a:hover,
+	.menu a:hover {
+		color: var(--hover-color);
+		border-bottom: 2px solid var(--hover-color);
 	}
 }
