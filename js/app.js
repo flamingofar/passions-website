@@ -115,7 +115,10 @@ function showSinglePage(cocktail) {
 // Scroll funktion
 let bg_pattern = document.querySelector(".background");
 
+// Hver gang der bliver scrollet kører denne funktion
 window.addEventListener("scroll", () => {
+	// Tager fat i vinduets y-position
 	let scroll = window.scrollY;
+	// Manipulere positionen for baggrunds mønstret i forhold til scrolling
 	bg_pattern.style.transform = `translateY(${scroll * 0.5}px)`;
 });
