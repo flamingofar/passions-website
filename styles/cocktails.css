@@ -27,12 +27,75 @@ article {
 	cursor: pointer;
 }
 
-ul {
+.filter_btn_container_1 {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	gap: 0.5rem;
 	flex-wrap: wrap;
+}
+
+.filter_btn_container_1 {
+	display: flex;
+	row-gap: 0.5rem;
+}
+.filter_btn_container_1 .box {
+	width: 10rem;
+	height: auto;
+	display: flex;
+	justify-content: space-between;
+
+	padding: 0.5rem 0.5rem 0.5rem 1rem;
+	align-items: center;
+	background: var(--main-color);
+	border: 2px solid var(--heading-color);
+}
+
+.box h3 {
+	margin: 0;
+	font-weight: 100;
+	font-family: "Songti TC", serif;
+}
+
+input[type="checkbox"] {
+	position: relative;
+	overflow: hidden;
+	appearance: none;
+
+	cursor: pointer;
+}
+
+/* Fyld */
+input[type="checkbox"].check {
+	position: relative;
+	width: 1.4rem;
+	height: 1.4rem;
+	position: relative;
+
+	transition: background 250ms;
+	overflow: unset;
+	z-index: 0;
+}
+
+/* Ramme */
+input[type="checkbox"].check::before {
+	display: block;
+	position: absolute;
+	top: -5px;
+	left: -5px;
+	content: "";
+	width: 1.8rem;
+	height: 1.8rem;
+	position: relative;
+	border: 2px solid var(--heading-color);
+
+	z-index: 10;
+
+	transition: border 250ms;
+}
+
+input[type="checkbox"].check:checked {
+	background: var(--heading-color);
 }
 
 button {
@@ -206,51 +269,12 @@ footer {
 		border: 2px solid var(--heading-color);
 	}
 
-	.box h3 {
-		margin: 0;
-		font-weight: 100;
-		font-family: "Songti TC", serif;
-	}
-
 	input[type="checkbox"] {
 		position: relative;
 		overflow: hidden;
 		appearance: none;
 
 		cursor: pointer;
-	}
-
-	/* Fyld */
-	input[type="checkbox"].check {
-		position: relative;
-		width: 1.4rem;
-		height: 1.4rem;
-		position: relative;
-
-		transition: background 250ms;
-		overflow: unset;
-		z-index: 0;
-	}
-
-	/* Ramme */
-	input[type="checkbox"].check::before {
-		display: block;
-		position: absolute;
-		top: -5px;
-		left: -5px;
-		content: "";
-		width: 1.8rem;
-		height: 1.8rem;
-		position: relative;
-		border: 2px solid var(--heading-color);
-
-		z-index: 10;
-
-		transition: border 250ms;
-	}
-
-	input[type="checkbox"].check:checked {
-		background: var(--heading-color);
 	}
 
 	/* MODAL */
