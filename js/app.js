@@ -111,4 +111,11 @@ function popUpHandler(cocktail) {
 function showSinglePage(cocktail) {
 	location.href = `_single-page.html?id=${cocktail._id}`;
 }
-//613b0759d943be7d000b252f
+
+// Scroll funktion
+let bg_pattern = document.querySelector(".background");
+
+window.addEventListener("scroll", () => {
+	let scroll = window.scrollY;
+	bg_pattern.style.transform = `translateY(${scroll * 0.5}px)`;
+});

@@ -14,38 +14,42 @@
 	<body>
 		<div class="background"></div>
 		<header>
+			<!--Html for vores navigations menu/burgermenu-->
+			<div class="background"></div>
 			<nav class="navigations_menu">
+				<a class="logo_mobile" href="index.html"
+					><img class="menu_logo" src="./assets/images/logo.svg" alt="logo"
+				/></a>
 				<div id="burger_wrapper">
-					<div>
-						<a id="burger_logo" href="index.html"
-							><img src="/assets/images/logo.svg" alt="logo"
-						/></a>
+					<div id="menuknap">
+						<div class="streg_1"></div>
+						<div class="streg_2"></div>
+						<div class="streg_3"></div>
 					</div>
-					<div id="menuknap">☰</div>
+					<ul class="menu hidden">
+						<li><a href="index.html">Welcome</a></li>
+						<li><a href="about.html">About</a></li>
+						<li class="logo_desktop">
+							<a class="logo" href="index.html"
+								><img id="menu_logo" src="./assets/images/logo.svg" alt="logo"
+							/></a>
+						</li>
+						<li><a href="cocktail.html">Cocktails</a></li>
+						<li><a class="active" href="kontakt.html">Contact</a></li>
+					</ul>
 				</div>
-				<ul id="menu" class="hidden">
-					<li>
-						<a class="hidden" href="index.html"
-							><img id="menu_logo" src="/assets/images/logo.svg" alt="logo"
-						/></a>
-					</li>
-					<li><a href="index.html">Welcome</a></li>
-					<li><a href="about.html">About</a></li>
-					<li><a href="cocktail.html">Cocktails</a></li>
-					<li><a class="active" href="kontakt.html">Contact</a></li>
-				</ul>
 			</nav>
 		</header>
 		<main>
 			<section>
 				<h2>Kontakt</h2>
 				<div class="adresse">
-				<address>
 					<h3>Adresse</h3>
-					<span>Cocktailvej 18</span>
-					<span>2000, Frederiksberg</span>
-				</address>
-			</div>
+					<address>
+						<span>Cocktailvej 18</span>
+						<span>2000, Frederiksberg</span>
+					</address>
+				</div>
 				<div class="telefon">
 					<h3>Telefon</h3>
 					<span>+45 26 26 00 00</span>
@@ -58,7 +62,6 @@
 					<h3>Telefon Tider</h3>
 					<span>Tirsdag - Fredag 10:00-17:00</span>
 				</div>
-			</div>
 			</section>
 			<iframe
 				class="maps"
@@ -82,5 +85,6 @@
 				<a href="about.html">Om os</a> &bull;<a href="kontakt.html">Kontakt</a>
 			</p>
 		</footer>
+		<script src="./js/burger.js"></script>
 	</body>
 </html>

@@ -97,7 +97,11 @@ button {
 /******* DESKTOP / Media querries *********/
 @media (min-width: 600px) {
 	/******* Menu - Media querries *********/
-
+	.first {
+		height: 50vh;
+		display: grid;
+		place-content: center;
+	}
 	#second {
 		margin-top: 7rem;
 		display: grid;
