@@ -91,7 +91,6 @@ button {
 
 /*------------------- MØNSTER BACKGROUND -------------------*/
 
-/* TODO Parallax */
 .background {
 	background-image: url("../assets/images/bg.svg");
 
@@ -169,58 +168,100 @@ footer a {
 	border-bottom: 2px solid var(--heading-color);
 }
 
-#menuknap {
-	font-size: 4rem;
-}
-
-#menu {
+.navigations_menu {
 	display: flex;
-}
-
-.menu {
-	/* required for logo positioned in center */
-	flex-basis: 80px;
-	list-style: none;
-}
-
-a {
-	padding: 0.5em;
-	text-decoration: none;
-	color: var(--heading-color);
-	font-family: parklane;
-	font-size: clamp(1rem, 0.5714rem + 1.9048vw, 2rem);
-}
-
-a:hover {
-	color: var(--hover-color);
-	text-decoration: underline;
-}
-
-.hidden {
-	display: none;
-}
-
-.logo {
-	display: hidden;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: row-reverse;
 }
 
 #burger_wrapper {
+	height: 2rem;
+	margin-right: 0.5rem;
+
 	display: flex;
 	justify-content: space-between;
-	padding-inline: 1.5rem;
-}
+	align-items: center;
 
-#burger_wrapper div:first-child {
-	width: 10rem;
-}
-
-#menu_logo {
-	max-width: 100%;
-	height: auto;
+	cursor: pointer;
 }
 
 #menuknap {
-	color: var(--heading-color);
+	width: 100%;
+	height: auto;
+	z-index: 101;
+}
+
+.streg_1,
+.streg_2,
+.streg_3 {
+	height: 2px;
+	width: 3rem;
+	border-radius: 999px;
+
+	background: var(--heading-color);
+	transition: transform 250ms;
+	transform-origin: bottom;
+}
+.streg_1 {
+	transform: translateY(-0.5rem);
+}
+
+.streg_3 {
+	transform: translateY(0.5rem);
+}
+
+#menu_logo {
+	width: 20vw;
+	margin: 0.5rem 0.5rem;
+}
+
+.menu {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+
+	background: var(--main-color);
+
+	z-index: 100;
+	transition: 250ms;
+}
+
+.menu li {
+	font-size: 5rem;
+	margin-left: 4rem;
+}
+
+#menuknap.kryds .streg_1 {
+	transform: rotate(45deg) translateY(calc(50% + (2px / 2)));
+}
+#menuknap.kryds .streg_2 {
+	transform: translateY(-500%);
+	opacity: 0;
+}
+#menuknap.kryds .streg_3 {
+	transform: rotate(-45deg) translateY(calc(50% - (2px / 2)));
+}
+
+.menu.hidden {
+	transition: 250ms;
+	transform: translateY(-100%);
+}
+
+@keyframes rotate {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
 }
 
 /******* DESKTOP / Media querries *********/
@@ -277,7 +318,7 @@ a:hover {
 		display: none;
 	}
 
-	#menu.hidden {
+	#menu {
 		transform: translateX(0);
 		opacity: 1;
 		display: flex;
@@ -285,6 +326,17 @@ a:hover {
 		justify-content: space-around;
 		margin: 0;
 		padding-bottom: 0;
+
+		background: rgb(255, 255, 255);
+		background: rgb(0, 0, 0);
+		background: linear-gradient(
+			0deg,
+			rgba(0, 0, 0, 0) 0%,
+			rgba(31, 39, 53, 0.4948354341736695) 13%,
+			rgba(31, 39, 53, 0.6124824929971988) 18%,
+			rgba(31, 39, 53, 0.8673844537815126) 26%,
+			rgba(31, 39, 53, 1) 43%
+		);
 	}
 
 	#second {
