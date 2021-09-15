@@ -344,6 +344,17 @@ footer a {
 		grid-column-end: 2fr;
 	}
 
+	footer {
+		background: linear-gradient(
+			180deg,
+			rgba(0, 0, 0, 0) 0%,
+			rgba(31, 39, 53, 0.4948354341736695) 13%,
+			rgba(31, 39, 53, 0.6124824929971988) 18%,
+			rgba(31, 39, 53, 0.8673844537815126) 26%,
+			rgba(31, 39, 53, 1) 43%
+		);
+	}
+
 	footer p a,
 	.menu a {
 		transition: 250ms;

@@ -149,6 +149,12 @@ article span {
 	display: none;
 }
 
+footer {
+	position: fixed;
+	bottom: 0;
+	width: 100vw;
+}
+
 /*-------------- MEDIA QUERIES --------------*/
 
 @media screen and (min-width: 600px) {
@@ -179,33 +185,72 @@ article span {
 		transition: 250ms ease-out;
 	}
 
-	.filter_btn_container {
+	/* Filtrerings Boks */
+	.filter_btn_container_1 {
 		position: fixed;
-		top: 25vh;
-		left: 0;
 		display: flex;
-		align-items: flex-start;
-		justify-content: flex-start;
+		top: 15vh;
+		left: 10vw;
 		flex-direction: column;
-		z-index: 9;
+		row-gap: 0.5rem;
+	}
+	.filter_btn_container_1 .box {
+		width: 10rem;
+		height: auto;
+		display: flex;
+		justify-content: space-between;
+
+		padding: 0.5rem 0.5rem 0.5rem 1rem;
+		align-items: center;
+		background: var(--main-color);
+		border: 2px solid var(--heading-color);
 	}
 
-	button {
-		width: 6rem;
-		padding-inline: 1rem;
-		font-size: 1.3em;
-		text-align: center;
+	.box h3 {
+		margin: 0;
+		font-weight: 100;
+		font-family: "Songti TC", serif;
 	}
 
-	.h2_container {
-		justify-content: flex-start;
-		flex-direction: row;
-		width: 80%;
-		margin: 0 auto;
-		padding-left: 1.65rem;
+	input[type="checkbox"] {
+		position: relative;
+		overflow: hidden;
+		appearance: none;
+
+		cursor: pointer;
 	}
-	.h2_container h2 {
-		font-size: 4rem;
+
+	/* Fyld */
+	input[type="checkbox"].check {
+		position: relative;
+		width: 1.4rem;
+		height: 1.4rem;
+		position: relative;
+
+		transition: background 250ms;
+		overflow: unset;
+		z-index: 0;
+	}
+
+	/* Ramme */
+	input[type="checkbox"].check::before {
+		display: block;
+		position: absolute;
+		top: -5px;
+		left: -5px;
+		content: "";
+		width: 1.8rem;
+		height: 1.8rem;
+		position: relative;
+		border: 2px solid var(--heading-color);
+
+		z-index: 10;
+
+		transition: border 250ms;
+	}
+
+	input[type="checkbox"].check:checked {
+		background: var(--heading-color);
 	}
 
 	/* MODAL */
