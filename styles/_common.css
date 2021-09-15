@@ -28,6 +28,7 @@
 body {
 	background: var(--main-color);
 	color: var(--text-color);
+	overflow-x: hidden;
 }
 
 main,
@@ -163,9 +164,7 @@ footer a {
 }
 
 /******* Menu *********/
-main {
-	margin-top: 5vh;
-}
+
 .active {
 	border-bottom: 2px solid var(--heading-color);
 }
@@ -223,7 +222,7 @@ main {
 
 .menu_logo {
 	width: 25vw;
-	margin: 0.5rem 0.5rem;
+	margin: 1rem 0 2rem 2rem;
 }
 
 .menu {
@@ -273,7 +272,7 @@ main {
 	/******* Menu - Media querries *********/
 
 	main {
-		margin-top: 20vh;
+		margin-top: 10vh;
 	}
 
 	#menuknap {
@@ -300,7 +299,7 @@ main {
 		justify-content: space-around;
 		flex-direction: row;
 
-		height: 20vh;
+		height: 12vh;
 
 		margin: 0;
 		padding-bottom: 0;
