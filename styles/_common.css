@@ -163,7 +163,9 @@ footer a {
 }
 
 /******* Menu *********/
-
+main {
+	margin-top: 5vh;
+}
 .active {
 	border-bottom: 2px solid var(--heading-color);
 }
@@ -172,24 +174,20 @@ footer a {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	flex-direction: row-reverse;
 }
 
 #burger_wrapper {
 	height: 2rem;
 	margin-right: 0.5rem;
 
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-
 	cursor: pointer;
 }
 
 #menuknap {
+	position: relative;
+	z-index: 101;
 	width: 100%;
 	height: auto;
-	z-index: 101;
 }
 
 .streg_1,
@@ -202,6 +200,7 @@ footer a {
 	background: var(--heading-color);
 	transition: transform 250ms;
 	transform-origin: bottom;
+	z-index: 101;
 }
 .streg_1 {
 	transform: translateY(-0.5rem);
@@ -211,8 +210,19 @@ footer a {
 	transform: translateY(0.5rem);
 }
 
-#menu_logo {
-	width: 20vw;
+#menuknap.kryds .streg_1 {
+	transform: rotate(45deg) translateY(calc(50% + (2px / 2)));
+}
+#menuknap.kryds .streg_2 {
+	transform: translateY(-500%);
+	opacity: 0;
+}
+#menuknap.kryds .streg_3 {
+	transform: rotate(-45deg) translateY(calc(50% - (2px / 2)));
+}
+
+.menu_logo {
+	width: 25vw;
 	margin: 0.5rem 0.5rem;
 }
 
@@ -238,30 +248,12 @@ footer a {
 	font-size: 5rem;
 	margin-left: 4rem;
 }
-
-#menuknap.kryds .streg_1 {
-	transform: rotate(45deg) translateY(calc(50% + (2px / 2)));
+.logo_desktop {
+	display: none;
 }
-#menuknap.kryds .streg_2 {
-	transform: translateY(-500%);
-	opacity: 0;
-}
-#menuknap.kryds .streg_3 {
-	transform: rotate(-45deg) translateY(calc(50% - (2px / 2)));
-}
-
 .menu.hidden {
 	transition: 250ms;
 	transform: translateY(-100%);
-}
-
-@keyframes rotate {
-	0% {
-		transform: rotate(0deg);
-	}
-	100% {
-		transform: rotate(360deg);
-	}
 }
 
 /******* DESKTOP / Media querries *********/
@@ -272,6 +264,7 @@ footer a {
 	button {
 		transition: 0.3s;
 	}
+
 	button:hover {
 		background-color: var(--hover-color);
 		color: var(--main-color);
@@ -280,7 +273,7 @@ footer a {
 	/******* Menu - Media querries *********/
 
 	main {
-		margin-top: 15vh;
+		margin-top: 20vh;
 	}
 
 	#menuknap {
@@ -288,42 +281,27 @@ footer a {
 	}
 
 	#menu {
-		position: fixed;
-		display: flex;
-		justify-content: space-between;
-
 		background: var(--main-color);
-		z-index: 20;
-	}
-
-	#burger_logo a img {
-		width: 100%;
 	}
 
 	#menu_logo {
+		margin: 0;
+		position: static;
 		max-width: 13rem;
 		height: auto;
 	}
 
-	.hidden {
-		display: flex;
-	}
-
-	#menu li:first-child,
-	li:nth-child(n + 4) {
-		order: 3;
-	}
-
-	#burger_logo {
-		display: none;
-	}
-
-	#menu {
-		transform: translateX(0);
+	.menu {
+		position: fixed;
+		top: 0;
 		opacity: 1;
 		display: flex;
 		align-items: center;
 		justify-content: space-around;
+		flex-direction: row;
+
+		height: 20vh;
+
 		margin: 0;
 		padding-bottom: 0;
 
@@ -337,6 +315,25 @@ footer a {
 			rgba(31, 39, 53, 0.8673844537815126) 26%,
 			rgba(31, 39, 53, 1) 43%
 		);
+		z-index: 20;
+	}
+
+	.menu li {
+		margin: 0;
+		font-size: 2rem;
+	}
+
+	/* Nulstille .hidden classen */
+	.menu.hidden {
+		transition: none;
+		transform: translateY(0);
+	}
+
+	.logo_desktop {
+		display: block;
+	}
+	.logo_mobile {
+		display: none;
 	}
 
 	#second {
