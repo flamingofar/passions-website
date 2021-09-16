@@ -45,6 +45,16 @@ address {
 		grid-area: 2/3/3/4;
 		place-self: center;
 	}
+
+	section h3 {
+		font-size: 1.8rem;
+	}
+
+	section span {
+		font-size: 1.5rem;
+		text-align: center;
+	}
+
 	.adresse {
 		grid-area: 3/3/4/4;
 	}
