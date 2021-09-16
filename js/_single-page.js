@@ -41,7 +41,7 @@ function vis(json) {
 	document.querySelector("h2").textContent = json.name;
 
 	cocktail.querySelector(".beskrivelse").textContent = json.lang_beskrivelse;
-	cocktail.querySelector("img").src = `${images}${json.billede_navn}.jpg`;
+	cocktail.querySelector("img").src = `${images}${json.billede_navn}.webp`;
 
 	// Ingredienser
 	cocktail.querySelector(

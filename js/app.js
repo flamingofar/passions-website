@@ -83,7 +83,7 @@ function vis() {
 			(filter == "campari" && campariCheck.checked === true) ||
 			(filter == "conac" && conacCheck.checked === true)
 		) {
-			klon.querySelector("img").src = `${images}${el.billede_navn}.jpg`;
+			klon.querySelector("img").src = `${images}${el.billede_navn}.webp`;
 
 			// Vis Pop-up
 			klon.querySelector(".produkt").addEventListener("click", () => {
@@ -118,7 +118,7 @@ function popUpHandler(cocktail) {
 	});
 
 	popUp.querySelector("h2").textContent = cocktail.name;
-	popUp.querySelector("img").src = `${images}${cocktail.billede_navn}.jpg`;
+	popUp.querySelector("img").src = `${images}${cocktail.billede_navn}.webp`;
 	popUp.querySelector("p").textContent = `${cocktail.popup_beskrivelse}`;
 	popUp.addEventListener("click", (e) => {
 		if (e.explicitOriginalTarget.classList == "pop-up") {
