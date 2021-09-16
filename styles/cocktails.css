@@ -1,10 +1,14 @@
 /** @format */
 .h2_container {
 	display: flex;
-	justify-content: center;
+	justify-content: left;
 	align-items: center;
-	flex-direction: column;
+	flex-direction: row;
 }
+.h2_container h2 {
+	font-size: 3rem;
+}
+
 section > div {
 	display: flex;
 	flex-direction: column;
@@ -126,6 +130,10 @@ article span {
 	padding: 1rem 0;
 }
 
+.section_produkt {
+	padding-inline: 8rem;
+}
+
 /*-------------- MODAL POP-UP --------------*/
 
 .pop-up {
@@ -229,8 +237,12 @@ footer {
 		font-size: 1rem;
 	}
 
-	.produkt_visning {
-		padding-inline: 8rem;
+	main {
+		grid-template-columns: repeat(10, 1fr);
+	}
+
+	.section_produkt {
+		grid-column: 3/10;
 	}
 
 	.produkt {
@@ -250,11 +262,10 @@ footer {
 
 	/* Filtrerings Boks */
 	.filter_btn_container_1 {
-		position: fixed;
+		grid-column: 2/3;
 		display: flex;
-		top: 15vh;
-		left: 10vw;
 		flex-direction: column;
+		justify-content: flex-start;
 		row-gap: 0.5rem;
 	}
 	.filter_btn_container_1 .box {
