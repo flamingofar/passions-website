@@ -54,7 +54,6 @@ async function loadJSON() {
 	const JSONData = await fetch(db, settings);
 
 	cocktails = await JSONData.json();
-	console.log(cocktails);
 
 	vis();
 }
