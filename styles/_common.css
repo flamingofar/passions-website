@@ -272,7 +272,7 @@ footer a {
 	/******* Menu - Media querries *********/
 
 	main {
-		margin-top: 10vh;
+		margin-top: 12vh;
 	}
 
 	#menuknap {
@@ -295,7 +295,7 @@ footer a {
 		justify-content: space-around;
 		flex-direction: row;
 
-		height: 12vh;
+		height: 15vh;
 
 		margin: 0;
 		padding-bottom: 0;
@@ -344,18 +344,6 @@ footer a {
 		grid-column-end: 2fr;
 	}
 
-	footer {
-		background: linear-gradient(
-			180deg,
-			rgba(0, 0, 0, 0) 0%,
-			rgba(31, 39, 53, 0.4948354341736695) 13%,
-			rgba(31, 39, 53, 0.6124824929971988) 18%,
-			rgba(31, 39, 53, 0.8673844537815126) 26%,
-			rgba(31, 39, 53, 1) 43%
-		);
-	}
-
-	footer p a,
 	.menu a {
 		transition: 250ms;
 	}
