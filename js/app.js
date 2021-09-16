@@ -139,7 +139,7 @@ window.addEventListener("scroll", () => {
 	// Tager fat i vinduets y-position
 	let scroll = window.scrollY;
 	// Manipulere positionen for baggrunds mønstret i forhold til scrolling
-	bg_pattern.style.transform = `translateY(${scroll * 0.5}px)`;
+	bg_pattern.style.transform = `translateY(${scroll * 0.5}px`;
 });
 
 // Checker om checkboxen er checked eller ikke og ændre den boolean værdi til det omvendte
