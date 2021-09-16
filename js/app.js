@@ -23,7 +23,6 @@ const lukBtn = document.querySelector(".luk");
 const recipe = document.querySelector(".recipe");
 const btns = document.querySelectorAll(".filter_btn_container button");
 
-const alleCheck = document.querySelector("check_1");
 const vodkaCheck = document.querySelector(".check_2");
 const romCheck = document.querySelector(".check_3");
 const ginCheck = document.querySelector(".check_4");

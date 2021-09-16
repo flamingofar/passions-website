@@ -39,6 +39,7 @@ article {
 	flex-wrap: wrap;
 }
 
+/*-------------- FILTERBOX --------------*/
 .filter_btn_container_1 {
 	display: flex;
 	row-gap: 0.5rem;
