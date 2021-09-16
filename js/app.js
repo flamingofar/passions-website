@@ -38,23 +38,6 @@ let cocktails;
 const images = "../assets/images/cocktails/";
 let filter = "alle";
 
-let romBool, ginBool, whiskeyBool, tequilaBool, campariBool;
-vodkaBool = true;
-romBool = false;
-ginBool = false;
-whiskeyBool = false;
-tequilaBool = false;
-campariBool = false;
-conacBool = false;
-
-vodkaCheck.checked = vodkaBool;
-romCheck.checked = romBool;
-ginCheck.checked = ginBool;
-whiskeyCheck.checked = whiskeyBool;
-tequilaCheck.checked = tequilaBool;
-campariCheck.checked = campariBool;
-conacCheck.checked = conacBool;
-
 window.addEventListener("DOMContentLoaded", start);
 
 function start() {
@@ -81,14 +64,6 @@ function vis() {
 		el.addEventListener("click", checkBoxHandler);
 	});
 
-	vodkaBool = vodkaCheck.checked;
-	romBool = romCheck.checked;
-	ginBool = ginCheck.checked;
-	whiskeyBool = whiskeyCheck.checked;
-	tequilaBool = tequilaCheck.checked;
-	campariBool = campariCheck.checked;
-	conacBool = conacCheck.checked;
-
 	const cocktailTemplate = document.querySelector("template");
 	const container = document.querySelector(".produkt_visning");
 	container.textContent = "";
@@ -100,13 +75,14 @@ function vis() {
 		klon.querySelector(".name").textContent = el.name;
 
 		if (
-			(filter == "vodka" && vodkaBool === true) ||
-			(filter == "rom" && romBool === true) ||
-			(filter == "gin" && ginBool === true) ||
-			(filter == "whiskey" && whiskeyBool === true) ||
-			(filter == "tequila" && tequilaBool === true) ||
-			(filter == "campari" && campariBool === true) ||
-			(filter == "conac" && conacBool === true)
+			// Her tjekkes der om der chekcboxen er krydset af og hvad filteret er
+			(filter == "vodka" && vodkaCheck.checked === true) ||
+			(filter == "rom" && romCheck.checked === true) ||
+			(filter == "gin" && ginCheck.checked === true) ||
+			(filter == "whiskey" && whiskeyCheck.checked === true) ||
+			(filter == "tequila" && tequilaCheck.checked === true) ||
+			(filter == "campari" && campariCheck.checked === true) ||
+			(filter == "conac" && conacCheck.checked === true)
 		) {
 			klon.querySelector("img").src = `${images}${el.billede_navn}.jpg`;
 
@@ -120,17 +96,16 @@ function vis() {
 	});
 }
 
+//Håndterer filteret til filtreringen
 function filtrerCocktails() {
 	filter = this.dataset.alkohol;
 	document.querySelector(".active_filter").classList.remove("active_filter");
 	this.classList.add("active_filter");
 
-	// let firstLetter = filter.charAt(0).toUpperCase() + filter.slice(1);
-	// document.querySelector("h2").textContent = firstLetter;
-
 	vis(cocktails);
 }
 
+// Håndterer pop-up'en(Modalen)
 function popUpHandler(cocktail) {
 	popUp.classList.remove("hide");
 	// Luk-knap funktion
@@ -153,6 +128,7 @@ function popUpHandler(cocktail) {
 	});
 }
 
+// Håndtere sideskiftet
 function showSinglePage(cocktail) {
 	location.href = `_single-page.html?id=${cocktail._id}`;
 }
@@ -167,6 +143,7 @@ window.addEventListener("scroll", () => {
 	bg_pattern.style.transform = `translateY(${scroll * 0.5}px)`;
 });
 
+// Checker om checkboxen er checked eller ikke og ændre den boolean værdi til det omvendte
 function checkBoxHandler() {
 	this.checked ? (this.checked = true) : (this.checked = false);
 	vis();
